@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Ejercicio04 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //01.Declaracion de Variables
         Scanner sc = new Scanner(System.in);
         int cant_meses;
@@ -29,30 +28,26 @@ public class Ejercicio04 {
         System.out.printf("El importe total es: %.2f\n", importe_total);
     }
 
-    static double calcular_interes_final(int meses, double capital, double interes)
-    {
+    static double calcular_interes_final(int meses, double capital, double interes) {
         double capital_actual, interes_actual;
 
         //inicializamos
         interes_actual = interes;
         capital_actual = capital;
 
-        for(int i=1; i<=meses; i++)
-        {
-            if( (i-1)%3 == 0 && i!=1)
-            {
-                interes_actual ++;
+        for (int i = 1; i <= meses; i++) {
+            if ((i - 1) % 3 == 0 && i != 1) {
+                interes_actual++;
             }
 
-            capital_actual *= (1+(interes_actual/100));
+            capital_actual *= (1 + (interes_actual / 100));
 
         }
 
         return interes_actual;
     }
 
-    static double calcular_interes_total(int meses, double capital_inicial, double interes_inicial)
-    {
+    static double calcular_interes_total(int meses, double capital_inicial, double interes_inicial) {
         double interes_total = 0;
         double nuevo_capital, interes_actual;
 
@@ -60,14 +55,12 @@ public class Ejercicio04 {
         interes_actual = interes_inicial;
         nuevo_capital = capital_inicial;
 
-        for(int i=1; i<=meses; i++)
-        {
-            if( (i-1)%3 == 0 && i!=1)
-            {
-                interes_actual ++;
+        for (int i = 1; i <= meses; i++) {
+            if ((i - 1) % 3 == 0 && i != 1) {
+                interes_actual++;
             }
 
-            nuevo_capital *= (1+(interes_actual/100));
+            nuevo_capital *= (1 + (interes_actual / 100));
         }
 
         interes_total = ((nuevo_capital / capital_inicial) - 1) * 100;
@@ -75,8 +68,7 @@ public class Ejercicio04 {
         return interes_total;
     }
 
-    static double calcular_importe_total(int meses, double capital_inicial, double interes_inicial)
-    {
+    static double calcular_importe_total(int meses, double capital_inicial, double interes_inicial) {
         double nuevo_capital, interes_actual;
         int contador = 1;
 
@@ -84,12 +76,11 @@ public class Ejercicio04 {
         interes_actual = interes_inicial;
         nuevo_capital = capital_inicial;
 
-        while(contador <= meses)
-        {
-            if( (contador-1)%3 == 0 && contador!=1)
-                interes_actual ++;
+        while (contador <= meses) {
+            if ((contador - 1) % 3 == 0 && contador != 1)
+                interes_actual++;
 
-            nuevo_capital *= (1+(interes_actual/100));
+            nuevo_capital *= (1 + (interes_actual / 100));
 
             contador++;
         }

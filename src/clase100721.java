@@ -3,17 +3,18 @@ import java.util.Arrays;
 public class clase100721 {
 
     static String[] tipos = {"Camion", "Auto", "Auto", "Bus", "Camion"};
-    static String[] placas = {"APE311", "BVF240", "EPS495", "WSD588","APC221","APC227","BVF249"};
-    private static String[] obtenerStickerPalcas(){
-        int contadorVerde=0;
-        int contadorRojo=0;
+    static String[] placas = {"APE311", "BVF240", "EPS495", "WSD588", "APC221", "APC227", "BVF249"};
+
+    private static String[] obtenerStickerPalcas() {
+        int contadorVerde = 0;
+        int contadorRojo = 0;
         String[] newArrayPlacas = new String[placas.length];
-        for(int i=0; i<placas.length; i++){
-            System.out.println(placas[i].substring(5,6).equals("7"));
-            if ( placas[i].substring(5,6).equals("7") || placas[i].substring(5,6).equals("8")){
+        for (int i = 0; i < placas.length; i++) {
+            System.out.println(placas[i].substring(5, 6).equals("7"));
+            if (placas[i].substring(5, 6).equals("7") || placas[i].substring(5, 6).equals("8")) {
                 contadorVerde++;
                 newArrayPlacas[i] = placas[i];
-            }else if ( placas[i].substring(5,6).equals("9") || placas[i].substring(5,6).equals("0")){
+            } else if (placas[i].substring(5, 6).equals("9") || placas[i].substring(5, 6).equals("0")) {
                 contadorRojo++;
                 newArrayPlacas[i] = placas[i];
             }
@@ -21,6 +22,7 @@ public class clase100721 {
 
         return newArrayPlacas;
     }
+
     public static void main(String[] args) {
 //        int[] ar = {1, 2, 2, 1, 1, 3, 5, 1, 2};
 //        // ARRAY ORDENADO
@@ -64,15 +66,15 @@ public class clase100721 {
 //                System.out.print("" + arRepetidos[x][y] + " ");
 //            System.out.print("},");
 //        }
-        int contadorVerde=0;
-        int contadorRojo=0;
+        int contadorVerde = 0;
+        int contadorRojo = 0;
         String[] newArrayPlacas = new String[placas.length];
-        for(int i=0; i<placas.length; i++){
-            System.out.println(placas[i].substring(5,6).equals("7"));
-            if ( placas[i].substring(5,6).equals("7") || placas[i].substring(5,6).equals("8")){
+        for (int i = 0; i < placas.length; i++) {
+            System.out.println(placas[i].substring(5, 6).equals("7"));
+            if (placas[i].substring(5, 6).equals("7") || placas[i].substring(5, 6).equals("8")) {
                 contadorVerde++;
                 newArrayPlacas[i] = placas[i];
-            }else if ( placas[i].substring(5,6).equals("9") || placas[i].substring(5,6).equals("0")){
+            } else if (placas[i].substring(5, 6).equals("9") || placas[i].substring(5, 6).equals("0")) {
                 contadorRojo++;
                 newArrayPlacas[i] = placas[i];
             }

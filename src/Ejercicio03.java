@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Ejercicio03 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //01.Declaracion de Variables
         Scanner sc = new Scanner(System.in);
         double primera_cuota, importe, importe_calculado;
@@ -27,13 +26,11 @@ public class Ejercicio03 {
         System.out.println("La cantidad de meses de pago es: " + cant_meses_calculado);
     }
 
-    static double calcular_importe(double cuota_nro1, int meses)
-    {
+    static double calcular_importe(double cuota_nro1, int meses) {
         double acumulado = 0, cuota;
 
         cuota = cuota_nro1;
-        for(int i=1; i<=meses; i++)
-        {
+        for (int i = 1; i <= meses; i++) {
             acumulado += cuota; // total = total + cuota;
             cuota *= 2;     // cuota = cuota * 2;
         }
@@ -41,8 +38,7 @@ public class Ejercicio03 {
         return acumulado;
     }
 
-    static int calcular_meses(double primera_cuota, double importe)
-    {
+    static int calcular_meses(double primera_cuota, double importe) {
         int meses = 0;
         double acumulado = 0, cuota_mes_actual;
 
@@ -51,7 +47,7 @@ public class Ejercicio03 {
             acumulado += cuota_mes_actual;      // acumulado = acumulado + cuota_mes_actual;
             cuota_mes_actual *= 2;              // cuota_mes_actual = cuota_mes_actual * 2;
             meses++;                            // meses = meses + 1;
-        }while(acumulado <= importe);
+        } while (acumulado <= importe);
 
         return meses;
     }

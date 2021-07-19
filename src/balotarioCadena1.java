@@ -37,7 +37,7 @@ public class balotarioCadena1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(evaluarTextoCifrado("A",3));
-        System.out.println(evaluarTextoCifrado("UN TEXTO",3));
+        System.out.println(evaluarTextoCifrado("A", 3));
+        System.out.println(evaluarTextoCifrado("UN TEXTO", 3));
     }
 }

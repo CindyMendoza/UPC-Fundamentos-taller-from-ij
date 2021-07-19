@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Ejercicio02 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String tipo;
         double sueldo_inicial_g, sueldo_final_g, porcentaje_g;
@@ -37,26 +36,20 @@ public class Ejercicio02 {
         System.out.printf("\nLa suma de sueldos es %.2f.\n", suma);
     }
 
-    static double calcular_sueldo(String tipo, double sueldo_inicial, int anio)
-    {
+    static double calcular_sueldo(String tipo, double sueldo_inicial, int anio) {
         double sueldo_final = 0;
 
         sueldo_final = sueldo_inicial;
-        if(tipo.equals("G"))
-        {
-            for(int i=0; i<anio; i++)
-            {
-                if(i != 0 && i%4 == 0)
+        if (tipo.equals("G")) {
+            for (int i = 0; i < anio; i++) {
+                if (i != 0 && i % 4 == 0)
                     sueldo_final = sueldo_final * (1 + 0.18);
                 else
                     sueldo_final = sueldo_final * (1 + 0.14);
             }
-        }
-        else if(tipo.equals("E"))
-        {
-            for(int i=0; i<anio; i++)
-            {
-                if(i != 0 && i%4 == 0)
+        } else if (tipo.equals("E")) {
+            for (int i = 0; i < anio; i++) {
+                if (i != 0 && i % 4 == 0)
                     sueldo_final = sueldo_final * (1 + 0.12);
                 else
                     sueldo_final = sueldo_final * (1 + 0.08);
@@ -66,8 +59,7 @@ public class Ejercicio02 {
         return sueldo_final;
     }
 
-    static double calcular_aumento(double s_inicial, double s_final)
-    {
+    static double calcular_aumento(double s_inicial, double s_final) {
         double porcentaje = 0;
 
         porcentaje = ((s_final / s_inicial) - 1) * 100;
@@ -75,8 +67,7 @@ public class Ejercicio02 {
         return porcentaje;
     }
 
-    static double sumar_sueldos(double sueldo_gerente, double sueldo_empleado)
-    {
+    static double sumar_sueldos(double sueldo_gerente, double sueldo_empleado) {
         double suma = 0;
         suma = sueldo_gerente + sueldo_empleado;
         return suma;
